@@ -1,0 +1,456 @@
+/* Styles spécifiques pour la page d'administration */
+
+.admin-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+/* Styles pour le formulaire de changement de mot de passe */
+.password-change-container {
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    margin-top: 2rem;
+    max-width: 600px;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.password-change-container h3 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 2px solid rgba(0,0,0,0.1);
+}
+
+#password-change-form div {
+    margin-bottom: 1.5rem;
+}
+
+#password-change-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+#password-change-form input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 4px;
+    font-size: 1rem;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: border-color 0.3s ease;
+}
+
+#password-change-form input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(58, 110, 165, 0.2);
+}
+
+.form-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.submit-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: var(--primary-dark);
+}
+
+.cancel-btn {
+    background-color: #e5e7eb;
+    color: #4b5563;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cancel-btn:hover {
+    background-color: #d1d5db;
+}
+
+/* Styles pour le formulaire de connexion */
+#login-section {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    animation: fadeIn 0.5s ease-out;
+}
+
+#login-form div {
+    margin-bottom: 1.5rem;
+}
+
+#login-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+#login-form input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 4px;
+    font-size: 1rem;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: border-color 0.3s ease;
+}
+
+#login-form input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(58, 110, 165, 0.2);
+}
+
+#login-form button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+#login-form button:hover {
+    background-color: var(--primary-dark);
+}
+
+/* Styles pour la section des messages */
+#messages-section {
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    animation: fadeIn 0.5s ease-out;
+}
+
+.admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+#logout-btn {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#logout-btn:hover {
+    background-color: #e05555;
+}
+
+.filter-controls {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.filter-controls div {
+    flex: 1;
+    min-width: 200px;
+}
+
+.filter-controls label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.filter-controls select,
+.filter-controls input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 4px;
+    font-size: 1rem;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.messages-container {
+    overflow-x: auto;
+}
+
+#messages-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+#messages-table th,
+#messages-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+#messages-table th {
+    background-color: rgba(0,0,0,0.03);
+    font-weight: 600;
+    color: var(--primary-dark);
+}
+
+#messages-table tbody tr {
+    transition: background-color 0.3s ease;
+}
+
+#messages-table tbody tr:hover {
+    background-color: rgba(0,0,0,0.02);
+}
+
+.message-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.message-actions button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0.3rem 0.5rem;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+}
+
+.view-btn {
+    color: var(--primary-color);
+}
+
+.delete-btn {
+    color: var(--secondary-color);
+}
+
+.message-actions button:hover {
+    background-color: rgba(0,0,0,0.05);
+}
+
+#no-messages {
+    text-align: center;
+    padding: 2rem;
+    color: var(--text-light);
+}
+
+/* Message modal */
+.message-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: var(--bg-color);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    max-width: 600px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    position: relative;
+}
+
+.close-modal {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text-light);
+}
+
+.modal-content h3 {
+    margin-top: 0;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.message-details p {
+    margin-bottom: 1rem;
+}
+
+.message-details strong {
+    color: var(--primary-dark);
+}
+
+/* Styles pour les outils d'administration */
+.admin-tools {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.tool-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.tool-btn:hover {
+    background-color: var(--primary-dark);
+}
+
+/* Styles pour les statistiques */
+.stats-container {
+    margin-top: 1.5rem;
+}
+
+.stats-list {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.stats-list li {
+    margin-bottom: 1rem;
+}
+
+.stat-label {
+    margin-bottom: 0.3rem;
+    font-weight: 500;
+}
+
+.stat-bar-container {
+    background-color: rgba(0,0,0,0.05);
+    height: 20px;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.stat-bar {
+    background-color: var(--primary-color);
+    height: 100%;
+    border-radius: 10px;
+}
+
+.stat-value {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    line-height: 20px;
+    font-size: 0.8rem;
+    color: var(--text-color);
+}
+
+/* Styles pour la recherche avancée */
+.search-modal-content {
+    max-width: 700px;
+}
+
+#advanced-search-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+#advanced-search-form div:last-child {
+    grid-column: span 2;
+}
+
+#advanced-search-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+#advanced-search-form input,
+#advanced-search-form select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 4px;
+    font-size: 1rem;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.search-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.search-btn:hover {
+    background-color: var(--primary-dark);
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .filter-controls {
+        flex-direction: column;
+    }
+    
+    #messages-table th:nth-child(4),
+    #messages-table td:nth-child(4),
+    #messages-table th:nth-child(6),
+    #messages-table td:nth-child(6) {
+        display: none;
+    }
+}

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administration - MP Services</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <header>
+        <button class="theme-toggle" aria-label="Basculer le thème">
+            <span class="icon">🌙</span>
+        </button>
+        <h1>MP Services</h1>
+        <p>Espace d'administration</p>
+    </header>
+    
+    <nav>
+        <button class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="nav-links">
+            <a href="index.html">Accueil</a>
+            <a href="index.html#services">Nos Services</a>
+            <a href="index.html#secteurs">Secteurs</a>
+            <a href="index.html#approche">Notre Approche</a>
+            <a href="contact.html">Contact</a>
+            <a href="admin.html" class="active">Admin</a>
+        </div>
+    </nav>
+    
+    <div class="admin-container">
+        <!-- Section de connexion -->
+        <section id="login-section">
+            <h2>Connexion à l'espace administrateur</h2>
+            <form id="login-form">
+                <div>
+                    <label for="username">Nom d'utilisateur:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                
+                <div>
+                    <label for="password">Mot de passe:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                
+                <button type="submit">Se connecter</button>
+            </form>
+        </section>
+
+        <!-- Section des messages (initialement cachée) -->
+        <section id="messages-section" style="display: none;">
+            <div class="admin-header">
+                <h2>Messages des visiteurs</h2>
+                <button id="logout-btn">Déconnexion</button>
+            </div>
+            
+            <div class="filter-controls">
+                <div>
+                    <label for="filter-secteur">Filtrer par secteur:</label>
+                    <select id="filter-secteur">
+                        <option value="">Tous les secteurs</option>
+                        <option value="industrie">Industrie et Production</option>
+                        <option value="batiment">Bâtiment et Travaux Publics</option>
+                        <option value="logistique">Logistique et Transport</option>
+                        <option value="tertiaire">Tertiaire et Administratif</option>
+                        <option value="hotellerie">Hôtellerie-Restauration</option>
+                    </select>
+                </div>
+                
+                <div>
+                    <label for="sort-by">Trier par:</label>
+                    <select id="sort-by">
+                        <option value="date-desc">Date (plus récent)</option>
+                        <option value="date-asc">Date (plus ancien)</option>
+                        <option value="name">Nom</option>
+                        <option value="secteur">Secteur</option>
+                    </select>
+                </div>
+                
+                <div>
+                    <label for="search-input">Rechercher:</label>
+                    <input type="text" id="search-input" placeholder="Rechercher dans les messages...">
+                </div>
+            </div>
+            
+            <div class="admin-tools">
+                <button id="export-csv" class="tool-btn">Exporter en CSV</button>
+                <button id="show-stats" class="tool-btn">Statistiques</button>
+                <button id="advanced-search" class="tool-btn">Recherche avancée</button>
+                <button id="change-password-btn" class="tool-btn">Changer le mot de passe</button>
+            </div>
+            
+            <!-- Section de changement de mot de passe (initialement cachée) -->
+            <div id="password-change-section" style="display: none;" class="password-change-container">
+                <h3>Changer le mot de passe</h3>
+                <form id="password-change-form">
+                    <div>
+                        <label for="current-password">Mot de passe actuel:</label>
+                        <input type="password" id="current-password" required>
+                    </div>
+                    <div>
+                        <label for="new-password">Nouveau mot de passe:</label>
+                        <input type="password" id="new-password" required>
+                    </div>
+                    <div>
+                        <label for="confirm-password">Confirmer le mot de passe:</label>
+                        <input type="password" id="confirm-password" required>
+                    </div>
+                    <div class="form-buttons">
+                        <button type="submit" class="submit-btn">Enregistrer</button>
+                        <button type="button" id="cancel-password-change" class="cancel-btn">Annuler</button>
+                    </div>
+                </form>
+            </div>
+            
+            <div class="messages-container">
+                <table id="messages-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Nom</th>
+                            <th>Email</th>
+                            <th>Téléphone</th>
+                            <th>Secteur</th>
+                            <th>Message</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="messages-list">
+                        <!-- Les messages seront ajoutés ici dynamiquement -->
+                    </tbody>
+                </table>
+                <div id="no-messages" style="display: none;">
+                    <p>Aucun message trouvé.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <p>&copy;  2025 MP Service. Tous droits réservés.</p>
+    </footer>
+    
+    <script src="script.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>

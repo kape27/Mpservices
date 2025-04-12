@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 80" width="240" height="80">
+  <!-- Définition des dégradés et styles -->
+  <defs>
+    <!-- Dégradé principal pour le fond -->
+    <linearGradient id="mainGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#004e92;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3a6ea5;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Dégradé pour les éléments graphiques -->
+    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff6b6b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ee0979;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Style pour l'effet de brillance -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  
+  <!-- Forme principale du logo avec coins arrondis -->
+  <rect x="10" y="15" width="220" height="50" rx="10" fill="url(#mainGradient)" />
+  
+  <!-- Éléments graphiques symbolisant les différents secteurs d'activité -->
+  <!-- Industrie (engrenage) -->
+  <circle cx="35" cy="40" r="12" fill="url(#accentGradient)" />
+  <circle cx="35" cy="40" r="6" fill="#ffffff" opacity="0.8" />
+  <path d="M35,28 L37,30 L33,30 Z M27,40 L29,42 L29,38 Z M35,52 L37,50 L33,50 Z M43,40 L41,42 L41,38 Z" fill="#ffffff" />
+  
+  <!-- Bâtiment (maison) -->
+  <path d="M60,45 L60,35 L55,30 L50,35 L50,45 Z" fill="#ffffff" opacity="0.8" />
+  <rect x="53" y="40" width="4" height="5" fill="url(#accentGradient)" />
+  
+  <!-- Logistique (flèche) -->
+  <path d="M75,40 L85,35 L82,40 L85,45 Z" fill="#ffffff" opacity="0.8" />
+  <line x1="70" y1="40" x2="82" y2="40" stroke="url(#accentGradient)" stroke-width="2" />
+  
+  <!-- Texte du logo avec le nom de l'entreprise -->
+  <text x="150" y="45" font-family="Montserrat, sans-serif" font-size="22" font-weight="700" fill="#ffffff" text-anchor="middle" filter="url(#glow)">MP SERVICE</text>
+  
+  <!-- Slogan -->
+  <text x="150" y="58" font-family="Montserrat, sans-serif" font-size="8" font-weight="400" fill="#ffffff" text-anchor="middle" opacity="0.9">SOUS-TRAITANCE DE PERSONNEL</text>
+  
+  <!-- Effet de brillance sur le bord supérieur -->
+  <path d="M10,25 Q120,15 230,25" stroke="#ffffff" stroke-width="1" fill="none" opacity="0.3" />
+</svg>
